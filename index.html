@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Document</title>
     <style>
         body {
@@ -14,50 +15,62 @@
 
         }
         iframe {
-            width: 100%;
-            height: 100%;
-            -webkit-overflow-scrolling: auto;
+            width: 100vw;
+            height: 100vh;
+            /* -webkit-overflow-scrolling: auto; */
         }
+
         .wrapper {
             overflow: scroll;
             height: 200px;
             width: 100%;
-            /* -webkit-overflow-scrolling: auto */
-
-
+            /* -webkit-overflow-scrolling: auto; */
         }
+        /* .wrapper::-webkit-scrollbar {
+            -webkit-appearance: scrollbartrack-vertical;
+        }            
 
-        /* iframe body::-webkit-scrollbar {
-            -webkit-appearance: none;
-        }
-
-        iframe body::-webkit-scrollbar:vertical {
-            width: 12px;
-        }
-
-        iframe body::-webkit-scrollbar:horizontal {
-            height: 12px;
-        }
-
-        iframe body::-webkit-scrollbar-thumb {
-            background-color: rgba(0, 0, 0, .5);
-            border-radius: 10px;
-            border: 2px solid #ffffff;
-        }
-
-        iframe body::-webkit-scrollbar-track {
-            border-radius: 10px;  
-            background-color: #ffffff; 
-        } */
+        .wrapper::-webkit-scrollbar {
+            -webkit-appearance: scrollbarthumb-vertical;
+        }  */
 
         
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <iframe src="iframe.html" frameborder="0" scrolling="yes"></iframe>
+        <iframe src="iframe.html" id="iframe1" frameborder="0" scrolling="no"></iframe>
     </div>
     
-    
+    <script>    
+        // console.log($,$("#iframe1").contents().find("head"));
+
+        // $("#iframe1").on('load', function() {
+        //     console.log(this,$("#iframe1").contents());
+        //     $("#iframe1").contents().find("head").append($("<style type='text/css'>  .my-class{display:none;}  </style>"));
+        // });
+
+        // $("#iframe1").contents().find("head").innerHTML = $("#iframe1").contents().find("head").innerHTML + '<style type="text/css">body { color: blue; }</style>';
+        //     ::-webkit-scrollbar {
+        //         width: 12px !important;
+        //     }
+        //     ::-webkit-scrollbar-track {
+        //         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
+        //         -webkit-border-radius: 10px !important;
+        //         border-radius: 10px !important;
+        //     }
+
+        //     ::-webkit-scrollbar-thumb {
+        //         -webkit-border-radius: 10px !important;
+        //         border-radius: 10px !important;
+        //         background: #41617D !important; 
+        //         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5) !important; 
+        //     }
+        //     ::-webkit-scrollbar-thumb:window-inactive {
+        //         background: #41617D !important;  
+        //     }
+        // </style>`);
+
+    </script>
 </body>
 </html>
